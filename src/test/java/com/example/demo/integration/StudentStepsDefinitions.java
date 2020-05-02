@@ -29,13 +29,13 @@ public class StudentStepsDefinitions {
 		assertTrue(actualString.contains("Welcome to home page!"));
 	}
 
-	@When("^Visit student list$")
+	@When("^User visit student list$")
 	public void enter_the_Username_and_Password() throws Throwable {
 		driver.get("http://localhost:8080/students");
 		driver.findElement(By.className("create_link")).click();
 	}
 
-	@Then("^Input and submit student form$")
+	@Then("^User input and submit student form$")
 	public void enter_and_submi_form() throws Throwable {
 		driver.findElement(By.id("firstname")).sendKeys("John");
 		driver.findElement(By.id("lastname")).sendKeys("Doe");
@@ -43,7 +43,7 @@ public class StudentStepsDefinitions {
 		driver.findElement(By.className("btn-default")).click();
 	}
 
-	@And("^Student list page will be displayed$")
+	@Then("^User will see student list page$")
 	public void verify_redurect_to_student__listpage() throws Throwable {
 		String actualString = driver.findElement(By.className("student_list_heading")).getText();
 		assertTrue(actualString.contains("Student List"));
