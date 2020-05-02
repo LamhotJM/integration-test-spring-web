@@ -5,4 +5,3 @@ Scenario: Create new Student
 		When Visit student list
 		And Input and submit student form
 		And Student list page will be displayed
-		
