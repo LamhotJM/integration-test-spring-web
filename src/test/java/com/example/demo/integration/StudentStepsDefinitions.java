@@ -10,18 +10,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class StudentStepsDefinitions {
-    @Given("I have {int} cukes in my belly")
-    public void I_have_cukes_in_my_belly(int cukes) {
-        Belly belly = new Belly();
-        belly.eat(cukes);
-    }
-    
+  
     WebDriver driver;			
 	
     @Given("^Open the Firefox and launch the application$")					
     public void open_the_Firefox_and_launch_the_application() throws Throwable							
     {		
-       System.setProperty("webdriver.gecko.driver", "E://Selenium//Selenium_Jars//geckodriver.exe");					
+       //System.setProperty("webdriver.gecko.driver", "E://Selenium//Selenium_Jars//geckodriver.exe");					
        driver= new FirefoxDriver();					
        driver.manage().window().maximize();			
        driver.get("http://demo.guru99.com/v4");					
