@@ -18,6 +18,8 @@ public class StudentStepsDefinitions {
 
 	@Given("^Open the Chrome and launch the application$")
 	public void open_the_chrome_and_launch_the_application() throws Throwable {
+		// This line below is optional if you already installed chromedriver in your machine
+		System.setProperty("webdriver.chrome.driver","/Users/lamhot/publish/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://localhost:8080/");
